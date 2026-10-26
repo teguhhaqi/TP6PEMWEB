@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tugas Pendahuluan 6 - Soal 1</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f7f6;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .card {
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            width: 300px;
+            text-align: center;
+            border: 2px solid #87CEEB;
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        label {
+            font-weight: bold;
+            display: block;
+            margin-bottom: 8px;
+        }
+        input[type="text"] {
+            width: 100%;
+            padding: 8px;
+            border: none;
+            border-bottom: 1px solid #ccc;
+            text-align: center;
+            font-size: 16px;
+            background: transparent;
+            outline: none;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="card">
+        <div class="form-group">
+            <label>Nama</label>
+            <input type="text" id="inputNama" readonly>
+        </div>
+        <div class="form-group">
+            <label>NIM</label>
+            <input type="text" id="inputNim" readonly>
+        </div>
+    </div>
+
+    <script>
+        // Memunculkan prompt saat halaman pertama kali dibuka
+        let nama = prompt("Masukkan nama kamu:");
+        let nim = prompt("Masukkan nim kamu:");
+
+        // Menampilkan hasil input ke dalam elemen form jika diisi
+        if (nama !== null && nama.trim() !== "") {
+            document.getElementById("inputNama").value = nama;
+        } else {
+            document.getElementById("inputNama").value = "-";
+        }
+
+        if (nim !== null && nim.trim() !== "") {
+            document.getElementById("inputNim").value = nim;
+        } else {
+            document.getElementById("inputNim").value = "-";
+        }
+    </script>
+
+</body>
+</html>
